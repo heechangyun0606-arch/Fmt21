@@ -1,0 +1,37 @@
+========================================================================
+FAST COMMON ANCHOR / SUFFIX CACHE
+========================================================================
+Loading 2110 raw...
+2110 raw: 111,848,162
+persons: 220791
+
+Loading cached 2130 chain...
+cached 2130 records: 225142
+
+Searching 2110 common anchor using EID + TYPE only...
+available OLD type02 targets: 153793
+FOUND target# 1 EID= 140240 2130len= 483 2110start= 72189534 2110len= 449 survive= 250 candidate_hits= 1
+
+COMMON ANCHOR
+EID: 140240
+TYPE: 2
+2110: 72189534
+2130: 163200
+
+Parsing 2110 suffix ONCE...
+25000 pos= 84733502
+50000 pos= 97968558
+75000 pos= 110503652
+2110 suffix: 77484
+2130 suffix: 225141
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/fast_common_anchor.py", line 345, in <module>
+    w.writerows(c11)
+    ~~~~~~~~~~~^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/csv.py", line 229, in writerows
+    return self.writer.writerows(map(self._dict_to_list, rowdicts))
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/data/com.termux/files/usr/lib/python3.13/csv.py", line 221, in _dict_to_list
+    raise ValueError("dict contains fields not in fieldnames: "
+                     + ", ".join([repr(x) for x in wrong_fields]))
+ValueError: dict contains fields not in fieldnames: 'footer'
