@@ -338,7 +338,7 @@ with OUT11.open(
 
     w=csv.DictWriter(
         f,
-        fieldnames=fields
+        fieldnames=fields, extrasaction="ignore"
     )
 
     w.writeheader()
